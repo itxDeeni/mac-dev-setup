@@ -594,14 +594,22 @@ eval "\$($BREW_PREFIX/bin/brew shellenv)"
 # Starship prompt
 command -v starship &>/dev/null && eval "\$(starship init zsh)"
 
-# Aliases (using eza, the maintained fork of exa)
-alias ls='eza'
-alias ll='eza -la'
-alias la='eza -la'
-alias cat='bat'
-alias find='fd'
-alias grep='rg'
-alias k='kubectl'
+# Aliases - DISABLED to allow both traditional and modern tools to coexist
+# Uncomment any aliases you want to use:
+# alias ls='eza'
+# alias ll='eza -la'
+# alias la='eza -la'
+# alias cat='bat'
+# alias find='fd'
+# alias grep='rg'
+# alias k='kubectl'
+#
+# Modern CLI tools are installed and available by their actual names:
+# - eza (modern ls with colors, icons, git status)
+# - bat (cat with syntax highlighting)
+# - fd (faster, simpler find)
+# - rg/ripgrep (faster grep)
+# - fzf (fuzzy finder)
 
 # FZF
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
